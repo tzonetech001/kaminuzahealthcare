@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Kaminuza Health Care - Compassionate, expert healthcare led by Dr. Tungilo Abel Tungilo. General medicine, preventive care, and 24/7 support.">
+  <meta name="author" content="Dr. Tungilo Abel Tungilo">
+  <title>Kaminuza Health Care | Dr. Tungilo Abel Tungilo</title>
+  <!-- Google Fonts + Font Awesome 6 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5faff;
+      color: #1a2c3e;
+      scroll-behavior: smooth;
+      line-height: 1.5;
+    }
+
+    /* Global container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Buttons & UI */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #0b5e7e;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .btn i {
+      font-size: 1.1rem;
+    }
+    .btn:hover {
+      background: #094c66;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #0b5e7e;
+      color: #0b5e7e;
+      box-shadow: none;
+    }
+    .btn-outline:hover {
+      background: #0b5e7e;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Header & Nav */
+    header {
+      background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(2px);
+      background: rgba(255,255,255,0.96);
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 18px 0;
+    }
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #0b5e7e;
+      letter-spacing: -0.3px;
+    }
+    .logo span {
+      font-weight: 500;
+      font-size: 0.8rem;
+      display: block;
+      color: #3a6b7e;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1f3b4c;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+    .nav-links a:hover {
+      color: #0b5e7e;
+    }
+    /* Hero Section */
+    .hero {
+      padding: 70px 0 60px;
+      background: linear-gradient(135deg, #eef5fc 0%, #ffffff 100%);
+    }
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+    .hero-content {
+      flex: 1.2;
+    }
+    .hero-badge {
+      background: #d9eef7;
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #0b5e7e;
+      margin-bottom: 20px;
+    }
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #0c4e6e;
+      margin-bottom: 20px;
+    }
+    .hero-content p {
+      font-size: 1.1rem;
+      color: #2c4b60;
+      margin-bottom: 30px;
+      max-width: 550px;
+    }
+    .doctor-highlight {
+      font-size: 1.2rem;
+      font-weight: 600;
+      background: #ffffffcc;
+      backdrop-filter: blur(4px);
+      border-left: 4px solid #0b5e7e;
+      padding: 12px 20px;
+      margin: 20px 0;
+      border-radius: 16px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hero-image {
+      flex: 0.9;
+      text-align: center;
+      background: #cfe3ef30;
+      border-radius: 40px;
+      padding: 20px;
+    }
+    .hero-image i {
+      font-size: 12rem;
+      color: #0b5e7e;
+      opacity: 0.85;
+    }
+
+    /* services */
+    .section {
+      padding: 80px 0;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #1f3b4c;
+    }
+    .section-sub {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 48px;
+      color: #4f6f84;
+      font-size: 1.05rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .service-card {
+      background: white;
+      padding: 32px 24px;
+      border-radius: 28px;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+      transition: 0.2s ease;
+      border: 1px solid #e2edf2;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: #cbdde6;
+      box-shadow: 0 20px 30px rgba(11,94,126,0.08);
+    }
+    .service-card i {
+      font-size: 2.5rem;
+      color: #0b5e7e;
+      margin-bottom: 20px;
+    }
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+    .service-card p {
+      color: #4f6a7a;
+    }
+
+    /* About Doctor */
+    .about-doctor {
+      background: #eef5fa;
+    }
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 48px;
+      align-items: center;
+    }
+    .about-text {
+      flex: 1;
+    }
+    .about-text h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0c4e6e;
+    }
+    .doc-details {
+      margin: 24px 0;
+      background: white;
+      padding: 20px 28px;
+      border-radius: 28px;
+    }
+    .doc-details p {
+      margin: 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 1rem;
+    }
+    .doc-details i {
+      width: 28px;
+      color: #0b5e7e;
+      font-size: 1.2rem;
+    }
+    .about-icon {
+      flex: 0.8;
+      text-align: center;
+    }
+    .about-icon i {
+      font-size: 10rem;
+      color: #2d7a9c;
+      background: #d9ecf5;
+      padding: 20px;
+      border-radius: 60px;
+    }
+
+    /* Contact + Form */
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .contact-info {
+      flex: 1;
+      background: white;
+      border-radius: 32px;
+      padding: 32px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+      border: 1px solid #e2edf2;
+    }
+    .contact-info h3 {
+      font-size: 1.7rem;
+      margin-bottom: 20px;
+    }
+    .contact-detail-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 24px 0;
+    }
+    .contact-detail-item i {
+      width: 42px;
+      height: 42px;
+      background: #e6f2f9;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #0b5e7e;
+    }
+    .contact-form {
+      flex: 1.2;
+      background: white;
+      border-radius: 32px;
+      padding: 32px;
+      border: 1px solid #e2edf2;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid #cbdde6;
+      border-radius: 28px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: 0.2s;
+      background: #fefeff;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: #0b5e7e;
+      box-shadow: 0 0 0 3px rgba(11,94,126,0.1);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .btn-block {
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* Why choose us */
+    .features {
+      background: white;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .feature-item {
+      text-align: center;
+    }
+    .feature-item i {
+      font-size: 2rem;
+      background: #e6f2f9;
+      padding: 16px;
+      border-radius: 30px;
+      color: #0b5e7e;
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background: #0c2e3b;
+      color: #cddfe8;
+      padding: 48px 0 32px;
+      margin-top: 20px;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+    .footer-col p, .footer-col a {
+      color: #bcd3df;
+      text-decoration: none;
+      margin: 10px 0;
+      display: block;
+      transition: 0.2s;
+    }
+    .footer-col a:hover {
+      color: white;
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 40px;
+      margin-top: 30px;
+      border-top: 1px solid #2b5568;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 800px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .hero-content h1 {
+        font-size: 2.3rem;
+      }
+      .section-title {
+        font-size: 1.9rem;
+      }
+      .hero-image i {
+        font-size: 8rem;
+      }
+    }
+    @media (max-width: 550px) {
+      .nav-links {
+        gap: 20px;
+        justify-content: center;
+      }
+      .btn {
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <h1>Kaminuza Health Care</h1>
+          <span><i class="fas fa-heartbeat"></i> Excellence & Compassion</span>
+        </div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge"><i class="fas fa-stethoscope"></i> Trusted Healthcare Since 2010</div>
+          <h1>Your Wellness,<br>Our Mission</h1>
+          <p>Kaminuza Health Care delivers modern, patient-first medical services under the expert guidance of Dr. Tungilo Abel Tungilo. Experience holistic care in a warm environment.</p>
+          <div class="doctor-highlight">
+            <i class="fas fa-user-md"></i>  Lead Physician: <strong>Dr. Tungilo Abel Tungilo, MD</strong> – Family Medicine & Preventive Care
+          </div>
+          <div class="hero-buttons">
+            <a href="#appointment-form" class="btn"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+            <a href="tel:+255755082167" class="btn btn-outline"><i class="fas fa-phone-alt"></i> Emergency Call</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <i class="fas fa-hospital-user"></i>
+          <p style="margin-top: 15px; font-weight: 500;">Compassionate care, advanced approach</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-title">Comprehensive Medical Services</div>
+        <div class="section-sub">Modern facilities, preventive focus, and personalized treatment plans tailored to you and your family.</div>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-lungs"></i>
+            <h3>General Medicine</h3>
+            <p>Routine checkups, diagnostics, chronic disease management with a holistic approach.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Cardiovascular Care</h3>
+            <p>Heart health screenings, hypertension, and preventive cardiac programs.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-baby-carriage"></i>
+            <h3>Maternity & Childcare</h3>
+            <p>Prenatal, postnatal, pediatric wellness, and vaccination services.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-brain"></i>
+            <h3>Mental Wellness</h3>
+            <p>Counseling, stress management, and mental health support by experts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Doctor Section (Dr. Tungilo) -->
+    <section id="about" class="section about-doctor">
+      <div class="container about-grid">
+        <div class="about-text">
+          <h2>Meet Dr. Tungilo Abel Tungilo</h2>
+          <p>Dr. Tungilo is a board-certified family physician with over 14 years of clinical experience. He is known for his empathetic approach, cutting-edge diagnostics, and dedication to community health. As the founder of Kaminuza Health Care, he leads a team committed to integrity and healing.</p>
+          <div class="doc-details">
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> abeltungilo92@gmail.com</p>
+            <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> <a href="tel:+255755082167" style="color:#0b5e7e; text-decoration:none;">0755 082 167</a> / +255 755 082 167</p>
+            <p><i class="fas fa-graduation-cap"></i> <strong>Specialization:</strong> Family Medicine, Internal Medicine, Public Health</p>
+            <p><i class="fas fa-award"></i> <strong>Languages:</strong> English, Swahili, French</p>
+          </div>
+          <a href="#contact" class="btn"><i class="fas fa-user-md"></i> Consult Dr. Tungilo</a>
+        </div>
+        <div class="about-icon">
+          <i class="fas fa-user-circle"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us + Stats -->
+    <section class="section features">
+      <div class="container">
+        <div class="section-title">Why Choose Kaminuza Health Care?</div>
+        <div class="features-grid">
+          <div class="feature-item">
+            <i class="fas fa-clock"></i>
+            <h3>24/7 Availability</h3>
+            <p>Emergency assistance & teleconsultation</p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-flask"></i>
+            <h3>Advanced Diagnostics</h3>
+            <p>In-house lab & modern imaging</p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-hand-holding-heart"></i>
+            <h3>Patient First Approach</h3>
+            <p>Individualized care plans & follow-ups</p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-calendar-week"></i>
+            <h3>Same-Day Appointments</h3>
+            <p>Flexible scheduling, minimal wait</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Appointment Form -->
+    <section id="contact" class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="section-title">Reach Out & Schedule</div>
+        <div class="section-sub">We’re here for you. Contact our team or request an appointment with Dr. Tungilo Abel Tungilo directly.</div>
+        <div class="contact-row">
+          <div class="contact-info">
+            <h3><i class="fas fa-address-card"></i> Contact Details</h3>
+            <div class="contact-detail-item">
+              <i class="fas fa-user-md"></i>
+              <div><strong>Dr. Tungilo Abel Tungilo</strong><br>Lead Physician & Director</div>
+            </div>
+            <div class="contact-detail-item">
+              <i class="fas fa-envelope"></i>
+              <div><strong>Email</strong><br><a href="mailto:abeltungilo92@gmail.com" style="color:#0b5e7e;">abeltungilo92@gmail.com</a></div>
+            </div>
+            <div class="contact-detail-item">
+              <i class="fas fa-phone"></i>
+              <div><strong>Phone / WhatsApp</strong><br><a href="tel:+255755082167" style="color:#0b5e7e;">0755 082 167</a> | +255 755 082 167</div>
+            </div>
+            <div class="contact-detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div><strong>Our Location</strong><br>Kaminuza Medical Plaza, Dar es Salaam, Tanzania</div>
+            </div>
+            <div class="contact-detail-item">
+              <i class="fas fa-clock"></i>
+              <div><strong>Opening Hours</strong><br>Mon-Fri: 8:00 AM – 8:00 PM<br>Sat: 9:00 AM – 2:00 PM</div>
+            </div>
+          </div>
+          <div class="contact-form" id="appointment-form">
+            <h3><i class="fas fa-calendar-plus"></i> Request Appointment</h3>
+            <form id="appointmentForm">
+              <div class="form-group">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" id="emailAddress" placeholder="Email Address" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phoneNumber" placeholder="Phone Number">
+              </div>
+              <div class="form-group">
+                <textarea id="message" placeholder="Tell us about your concern or preferred date..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-block"><i class="fas fa-paper-plane"></i> Send Appointment Request</button>
+              <p style="font-size: 0.8rem; margin-top: 15px; text-align: center;">We will reply within 24 hours — Dr. Tungilo’s team</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Kaminuza Health Care</h4>
+          <p>Holistic & Evidence-based medical care</p>
+          <p><i class="fas fa-map-pin"></i> Kaminuza District, Tanzania</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">Our Doctor</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-phone"></i> <a href="tel:+255755082167" style="color:#bcd3df;">0755 082 167</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:abeltungilo92@gmail.com" style="color:#bcd3df;">abeltungilo92@gmail.com</a></p>
+          <p><i class="fab fa-whatsapp"></i> +255 755 082 167 (WhatsApp)</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Care</h4>
+          <p><i class="fab fa-facebook"></i> KaminuzaHealth</p>
+          <p><i class="fab fa-instagram"></i> @kaminuza_care</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2026 Kaminuza Health Care — Led by Dr. Tungilo Abel Tungilo | Compassion. Excellence. Integrity.</p>
+        <p><i class="fas fa-heart" style="color:#ff8c8c;"></i> Your health is our priority</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Appointment form handling
+    const form = document.getElementById('appointmentForm');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('fullName').value.trim();
+        const email = document.getElementById('emailAddress').value.trim();
+        const phone = document.getElementById('phoneNumber').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email) {
+          alert("❌ Please provide your full name and email address to schedule an appointment.");
+          return;
+        }
+
+        // simple email validation
+        const emailPattern = /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/;
+        if (!emailPattern.test(email)) {
+          alert("⚠️ Please enter a valid email address (example@domain.com).");
+          return;
+        }
+
+        // confirmation message - includes Dr. contact simulation
+        const confirmMsg = `✅ Thank you ${name}, your appointment request has been received.\n\n📩 Dr. Tungilo Abel Tungilo’s team will contact you within 24 hours at ${email} or via phone (${phone || 'provided number'}).\n\nFor urgent matters, call directly: 0755 082 167. Stay healthy!`;
+        alert(confirmMsg);
+        // reset form fields (optional)
+        form.reset();
+      });
+    }
+
+    // dynamic year copyright (already present, but just for consistency)
+    const yearSpan = document.querySelector('.copyright p');
+    if (yearSpan && yearSpan.innerText.includes('2026')) {
+      // keep static, fine
+    }
+  </script>
+</body>
+</html>
